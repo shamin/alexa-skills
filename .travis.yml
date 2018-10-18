@@ -17,5 +17,5 @@ deploy:
   region: "us-east-1"
   role: "arn:aws:iam::057063438519:role/aws-serverless-repository-alexaskillskitnodejsfact-37G6OSYYKEY"
   runtime: "nodejs8.10"
-  handler_name: "index.handler"
+  handler_name: "handler"
   zip: ${TRAVIS_BUILD_DIR}/skill-1/
