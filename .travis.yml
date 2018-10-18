@@ -7,7 +7,7 @@ script:
   - npm install
 
 before_deploy:
-  - zip kochi-skills.zip
+  - zip -r kochi-skill.zip ${REPO}/skill-1/
 
 deploy:
   provider: lambda
