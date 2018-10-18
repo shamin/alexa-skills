@@ -180,7 +180,7 @@ const AttractionHandler = {
 
         const speechOutput = `Try ${
             attraction.name}, which is ${
-            attraction.distance === '0' ? 'right downtown. ' : `${attraction.distance} miles away. Have fun! `
+            attraction.distance === '0' ? 'right downtown. ' : `${attraction.distance} kilometers away. Have fun! `
         }${attraction.description}`;
 
         return responseBuilder.speak(speechOutput).getResponse();
