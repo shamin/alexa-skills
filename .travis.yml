@@ -7,9 +7,9 @@ script:
   - cd skill-1
   - npm install
 
-before_deploy:
-  - pwd
-  - zip -r kochi-skill.zip ${TRAVIS_BUILD_DIR}/skill-1/
+# before_deploy:
+#   - pwd
+#   - zip -r kochi-skill.zip ${TRAVIS_BUILD_DIR}/skill-1/
 
 deploy:
   provider: lambda
@@ -18,4 +18,4 @@ deploy:
   role: "arn:aws:iam::057063438519:role/aws-serverless-repository-alexaskillskitnodejsfact-37G6OSYYKEY"
   runtime: "nodejs8.10"
   handler_name: "index.handler"
-  zip: "kochi-skills.zip"
+  zip: ${TRAVIS_BUILD_DIR}/skill-1/
