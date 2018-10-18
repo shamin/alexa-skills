@@ -180,7 +180,7 @@ const AttractionHandler = {
 
         const speechOutput = `Try ${
             attraction.name}, which is ${
-            attraction.distance === '0' ? 'right downtown. ' : `${attraction.distance} miles away. Have fun! `
+            attraction.distance === '0' ? 'right downtown. ' : `${attraction.distance} kilometers away. Have fun! `
         }${attraction.description}`;
 
         return responseBuilder.speak(speechOutput).getResponse();
@@ -420,7 +420,7 @@ const data = {
 };
 
 const SKILL_NAME = 'Kochi City Guide';
-const FALLBACK_MESSAGE = `The ${SKILL_NAME} skill can\'t help you with that.  It can help you learn about Gloucester if you say tell me about this place. What can I help you with?`;
+const FALLBACK_MESSAGE = `The ${SKILL_NAME} skill can\'t help you with that.  It can help you learn about Kochi if you say tell me about this place. What can I help you with?`;
 const FALLBACK_REPROMPT = 'What can I help you with?';
 
 
