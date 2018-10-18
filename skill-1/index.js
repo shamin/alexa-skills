@@ -393,7 +393,7 @@ const data = {
 };
 
 const SKILL_NAME = 'Gloucester Guide';
-const FALLBACK_MESSAGE = `The ${SKILL_NAME} skill can\'t help you with that.  It can help you learn about Gloucester if you say tell me about this place. What can I help you with?`;
+const FALLBACK_MESSAGE = `The ${SKILL_NAME} skill can\'t help you with that.  It can help you learn about Kochi if you say tell me about this place. What can I help you with?`;
 const FALLBACK_REPROMPT = 'What can I help you with?';
 
 
