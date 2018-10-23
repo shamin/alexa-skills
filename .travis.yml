@@ -14,8 +14,8 @@ script:
 deploy:
   provider: lambda
   function_name: "kochi-city-guide"
-  region: "us-east-1"
-  role: "arn:aws:iam::057063438519:role/aws-serverless-repository-alexaskillskitnodejsfact-37G6OSYYKEY"
+  region: $AWS_REGION
+  role: $AWS_ROLE
   runtime: "nodejs8.10"
   handler_name: "handler"
   zip: ${TRAVIS_BUILD_DIR}/skill-1/
