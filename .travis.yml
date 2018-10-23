@@ -19,8 +19,6 @@ deploy:
   runtime: "nodejs8.10"
   handler_name: "handler"
   zip: ${TRAVIS_BUILD_DIR}/skill-1/
-  on:
-    condition: $DEPLOYMENT = kochi-city-guide
 
 deploy:
   provider: lambda
