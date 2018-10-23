@@ -6,6 +6,8 @@ node_js:
 script:
   - cd skill-1
   - npm install
+  - cd ../skill-2
+  - npm install
 
 # before_deploy:
 #   - pwd
