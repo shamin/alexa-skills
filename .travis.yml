@@ -12,10 +12,21 @@ script:
 #   - zip -r kochi-skill.zip ${TRAVIS_BUILD_DIR}/skill-1/
 
 deploy:
-  provider: lambda
-  function_name: "kochi-city-guide"
-  region: $AWS_REGION
-  role: $AWS_ROLE
-  runtime: "nodejs8.10"
-  handler_name: "handler"
-  zip: ${TRAVIS_BUILD_DIR}/skill-1/
+  - provider: lambda
+    function_name: "kochi-city-guide"
+    region: $AWS_REGION
+    role: $AWS_ROLE
+    runtime: "nodejs8.10"
+    handler_name: "handler"
+    zip: ${TRAVIS_BUILD_DIR}/skill-1/
+    on:	
+      condition: $DEPLOYMENT = kochi-city-guide
+  - provider: lambda	
+    function_name: "github-skill"	
+    region: $AWS_REGION
+    role: $AWS_ROLE
+    runtime: "nodejs8.10"	
+    handler_name: "handler"	
+    zip: ${TRAVIS_BUILD_DIR}/skill-2/	
+    on:	
+      condition: $DEPLOYMENT = github-skill	
