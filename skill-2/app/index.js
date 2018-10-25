@@ -5,6 +5,7 @@ const StopHandler = require('./handlers/stophandler')
 const FallbackHandler = require('./handlers/fallbackhandler')
 const SessionEndedHandler = require('./handlers/sessionendhandler')
 const ErrorHandler = require('./handlers/errorhandler')
+const LocalizationInterceptor = require('./interceptor')
 
 const skillBuilder = Alexa.SkillBuilders.custom();
 
@@ -16,5 +17,6 @@ module.exports = skillBuilder
         FallbackHandler,
         SessionEndedHandler
     )
+    .addRequestInterceptors(LocalizationInterceptor)
     .addErrorHandlers(ErrorHandler)
     .lambda();
