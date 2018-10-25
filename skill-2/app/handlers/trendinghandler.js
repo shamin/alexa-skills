@@ -19,10 +19,9 @@ const TrendingHandler = {
 
   async handle(handlerInput) {
     const responseBuilder = handlerInput.responseBuilder;
-    let language = "";
 
     const slots = handlerInput.requestEnvelope.request.intent.slots;
-    const language = slots["language"].value;
+    const language = slots["language"].value || "";
     const response = await getTrendingRepos(language);
     const speechOutput = getTextToSpeak(response)
 
