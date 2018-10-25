@@ -6,16 +6,6 @@ const TrendingHandler = {
 
     return request.type === 'IntentRequest' && request.intent.name === 'TrendingIntent';
   },
-  handle(handlerInput) {
-    const attributesManager = handlerInput.attributesManager;
-    const responseBuilder = handlerInput.responseBuilder;
-
-    const requestAttributes = attributesManager.getRequestAttributes();
-
-    return responseBuilder
-      .speak(requestAttributes.t('ABOUT'))
-      .getResponse();
-  },
 
   async handle(handlerInput) {
     const responseBuilder = handlerInput.responseBuilder;
