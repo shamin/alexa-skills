@@ -8,6 +8,8 @@ script:
   - npm install
   - cd ../skill-2
   - npm install
+  - cd ../skill-3
+  - npm install
 
 # before_deploy:
 #   - pwd
@@ -32,3 +34,12 @@ deploy:
     zip: ${TRAVIS_BUILD_DIR}/skill-2/	
     on:	
       condition: $DEPLOYMENT = github-skill	
+  - provider: lambda	
+    function_name: "hacker-news"	
+    region: $AWS_REGION
+    role: $AWS_ROLE
+    runtime: "nodejs8.10"	
+    handler_name: "handler"	
+    zip: ${TRAVIS_BUILD_DIR}/skill-3/	
+    on:	
+      condition: $DEPLOYMENT = hacker-news

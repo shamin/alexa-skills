@@ -1,0 +1,55 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "hacker news reader",
+            "intents": [
+                {
+                    "name": "AboutIntent",
+                    "slots": [],
+                    "samples": [
+                        "about"
+                    ]
+                },
+                {
+                    "name": "BestStoriesIntent",
+                    "samples": [
+                        "get best stories"
+                    ]
+                },
+                {
+                    "name": "NewStoriesIntent",
+                    "samples": [
+                        "get new stories"
+                    ]
+                },
+                {
+                    "name": "TopStoriesIntent",
+                    "samples": [
+                        "get top stories"
+                    ]
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": []
+        }
+    }
+}
