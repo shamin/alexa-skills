@@ -16,7 +16,7 @@ const getDetailedStories = async (type) => {
   const detailStories = subset.map(getStory)
   try {
     const data = await Promise.all(detailStories)
-    return data.join(", ")
+    return data.join(", Next Story : ")
   } catch (e) {
     console.error(e)
   }
