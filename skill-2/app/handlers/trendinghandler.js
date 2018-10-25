@@ -37,4 +37,4 @@ const getTextToSpeak = (data)=>{
   return text
 }
 
-module.exports = getTextToSpeak
+module.exports = TrendingHandler
