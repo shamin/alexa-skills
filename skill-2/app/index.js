@@ -1,5 +1,6 @@
 const Alexa = require('ask-sdk-core');
 const LaunchHandler = require('./handlers/launchhandler')
+const TrendingHandler = require('./handlers/trendinghandler')
 const AboutHandler = require('./handlers/abouthandler')
 const StopHandler = require('./handlers/stophandler')
 const FallbackHandler = require('./handlers/fallbackhandler')
@@ -13,6 +14,7 @@ module.exports = skillBuilder
     .addRequestHandlers(
         LaunchHandler,
         AboutHandler,
+        TrendingHandler,
         StopHandler,
         FallbackHandler,
         SessionEndedHandler
