@@ -1,78 +1,33 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "kochi city guide",
+            "invocationName": "github assistant",
             "intents": [
                 {
                     "name": "AboutIntent",
                     "slots": [],
                     "samples": [
-                        "about",
-                        "tell me about this place"
+                        "about"
                     ]
                 },
                 {
-                    "name": "CoffeeIntent",
-                    "slots": [],
-                    "samples": [
-                        "Give me some restaurents for coffee",
-                        "coffee"
-                    ]
-                },
-                {
-                    "name": "BreakfastIntent",
-                    "slots": [],
-                    "samples": [
-                        "Give me some restaurents for breakfast",
-                        "breakfast"
-                    ]
-                },
-                {
-                    "name": "LunchIntent",
-                    "slots": [],
-                    "samples": [
-                        "Give me some restaurents for lunch",
-                        "lunch"
-                    ]
-                },
-                {
-                    "name": "DinnerIntent",
-                    "slots": [],
-                    "samples": [
-                        "Give me some restaurents for dinner",
-                        "dinner"
-                    ]
-                },
-                {
-                    "name": "AttractionIntent",
+                    "name": "TrendingIntent",
                     "slots": [
                         {
-                            "name": "distance",
-                            "type": "AMAZON.NUMBER"
+                            "name": "language",
+                            "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "recommend an attraction",
-                        "recommend an attraction within {distance} miles",
-                        "give me an activity",
-                        "give me an activity within {distance} miles"
+                        "get trending {language} repositores"
                     ]
                 },
                 {
-                    "name": "GoOutIntent",
-                    "slots": [],
-                    "samples": [
-                        "go out",
-                        "go outside",
-                        "lets go out"
-                    ]
-                },
-                {
-                    "name": "AMAZON.YesIntent",
+                    "name": "AMAZON.FallbackIntent",
                     "samples": []
                 },
                 {
-                    "name": "AMAZON.NoIntent",
+                    "name": "AMAZON.CancelIntent",
                     "samples": []
                 },
                 {
@@ -84,11 +39,7 @@
                     "samples": []
                 },
                 {
-                    "name": "AMAZON.CancelIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.FallbackIntent",
+                    "name": "AMAZON.NavigateHomeIntent",
                     "samples": []
                 }
             ],
