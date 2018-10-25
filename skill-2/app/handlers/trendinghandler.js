@@ -23,7 +23,7 @@ const TrendingHandler = {
     const slots = handlerInput.requestEnvelope.request.intent.slots;
     const language = slots["language"].value || "";
     const response = await getTrendingRepos(language);
-    const speechOutput = getTextToSpeak(response)
+    const speechOutput = `Top ${language} repositories ${getTextToSpeak(response)}`
 
     return responseBuilder.speak(speechOutput).getResponse();
   },
@@ -31,8 +31,8 @@ const TrendingHandler = {
 };
 
 const getTextToSpeak = (data)=>{
-  const top = data.data.items.slice(1, 10);
-  const text = top.map((repo)=>repo.name).join(",")
+  const top = data.data.items.slice(0, 10);
+  const text = top.map((repo)=>repo.name).join(", ")
   return text
 }
 

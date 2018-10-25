@@ -1,8 +1,8 @@
 const axios = require("axios");
 
-const getTrendingRepos = async () => {
+const getTrendingRepos = async (language) => {
     try{
-      const response = await axios.get(`https://api.github.com/search/repositories?q=language:javascript+created:>${getPastDate()}&sort=stars&order=desc`)
+      const response = await axios.get(`https://api.github.com/search/repositories?q=language:${language}+created:>${getPastDate()}&sort=stars&order=desc`)
       return response
     } catch(e)
     {
