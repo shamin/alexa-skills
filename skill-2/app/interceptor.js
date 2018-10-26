@@ -21,8 +21,8 @@ const languageStrings = {
   en: {
       translation: {
           WELCOME: 'Welcome to Github Assistant!',
-          HELP: 'Github assistant helps you to give top trending repositories in github based on programming languages. Say, Get trending javascript repositores.',
-          ABOUT: 'Github assistant helps you to give top trending repositories in github based on programming languages. Say, Get trending javascript repositores.',
+          HELP: 'Github assistant helps you to give top trending repositories in github based on programming languages. Say, Get trending javascript repositories.',
+          ABOUT: 'Github assistant helps you to give top trending repositories in github based on programming languages. Say, Get trending javascript repositories.',
           STOP: 'Okay, see you next time!',
       },
   },
