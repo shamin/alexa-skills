@@ -12,7 +12,7 @@ const AboutHandler = {
 
         return responseBuilder
             .speak(requestAttributes.t('ABOUT'))
-            .shouldEndSession(false)
+            .reprompt(requestAttributes.t('ABOUT'))
             .getResponse();
     },
 };
