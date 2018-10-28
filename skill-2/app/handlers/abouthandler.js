@@ -12,6 +12,7 @@ const AboutHandler = {
 
       return responseBuilder
           .speak(requestAttributes.t('ABOUT'))
+          .shouldEndSession(false)
           .getResponse();
   },
 };
